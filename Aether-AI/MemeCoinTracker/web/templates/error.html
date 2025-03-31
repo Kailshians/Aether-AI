@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+
+{% block title %}{{ error }} | Aether AI{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center mt-5">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-header bg-danger text-white">
+                <h4 class="mb-0">{{ error }}</h4>
+            </div>
+            <div class="card-body text-center py-5">
+                <i data-feather="alert-triangle" style="width: 64px; height: 64px; color: #f44336; margin-bottom: 20px;"></i>
+                <h2 class="h4 mb-4">{{ message }}</h2>
+                <a href="/" class="btn btn-primary">
+                    <i data-feather="home"></i> Return to Home
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

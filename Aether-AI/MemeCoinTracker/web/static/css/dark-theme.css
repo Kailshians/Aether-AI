@@ -1,0 +1,283 @@
+/* Dark Theme CSS Overrides */
+
+:root {
+    --dark-bg: #121212;
+    --dark-surface: #1e1e1e;
+    --dark-card: #252525;
+    --dark-border: #333333;
+    --dark-text-primary: #ffffff;
+    --dark-text-secondary: #aaaaaa;
+    --dark-text-muted: #888888;
+    --primary-color: #bb86fc;
+    --secondary-color: #03dac6;
+    --accent-color: #cf6679;
+    --success-color: #4caf50;
+    --warning-color: #ff9800;
+    --danger-color: #f44336;
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: var(--dark-text-primary);
+}
+
+/* Header styles */
+.app-header {
+    background-color: var(--dark-surface);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.brand-name {
+    color: var(--dark-text-primary);
+}
+
+.brand-name span {
+    color: var(--primary-color);
+}
+
+.nav-link {
+    color: var(--dark-text-secondary) !important;
+}
+
+.nav-link:hover {
+    color: var(--primary-color) !important;
+}
+
+.nav-link.active {
+    color: var(--primary-color) !important;
+}
+
+.navbar-toggler {
+    background-color: var(--dark-surface);
+    border-color: var(--dark-border);
+}
+
+.navbar-light .navbar-toggler-icon {
+    filter: invert(1);
+}
+
+/* Card styles */
+.card {
+    background-color: var(--dark-card);
+    border: none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card-header {
+    background-color: var(--dark-surface);
+    border-bottom: 1px solid var(--dark-border);
+    color: var(--dark-text-primary);
+}
+
+.text-muted, .text-secondary {
+    color: var(--dark-text-secondary) !important;
+}
+
+/* Button styles */
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: #000;
+}
+
+.btn-primary:hover, .btn-primary:focus {
+    background-color: #a075db;
+    border-color: #a075db;
+    color: #000;
+}
+
+.btn-secondary {
+    background-color: var(--dark-surface);
+    border-color: var(--dark-border);
+    color: var(--dark-text-primary);
+}
+
+.btn-secondary:hover, .btn-secondary:focus {
+    background-color: #333;
+    border-color: #444;
+    color: var(--dark-text-primary);
+}
+
+.btn-outline-primary {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-color);
+    color: #000;
+}
+
+/* Form elements */
+.form-control {
+    background-color: var(--dark-surface);
+    border-color: var(--dark-border);
+    color: var(--dark-text-primary);
+}
+
+.form-control:focus {
+    background-color: var(--dark-surface);
+    border-color: var(--primary-color);
+    color: var(--dark-text-primary);
+    box-shadow: 0 0 0 0.25rem rgba(187, 134, 252, 0.25);
+}
+
+input::placeholder, textarea::placeholder {
+    color: var(--dark-text-muted) !important;
+}
+
+/* Lists */
+.list-group-item {
+    background-color: var(--dark-card);
+    border-color: var(--dark-border);
+    color: var(--dark-text-primary);
+}
+
+/* Footer */
+.app-footer {
+    background-color: var(--dark-surface);
+    border-top: 1px solid var(--dark-border);
+    color: var(--dark-text-secondary);
+}
+
+/* Alert specific styles */
+.alert-card {
+    background-color: var(--dark-card);
+    border-left: 4px solid var(--dark-border);
+}
+
+.alert-card.high {
+    border-left-color: var(--success-color);
+}
+
+.alert-card.medium {
+    border-left-color: var(--warning-color);
+}
+
+.alert-card.low {
+    border-left-color: var(--danger-color);
+}
+
+.alert-header {
+    border-bottom: 1px solid var(--dark-border);
+}
+
+.alert-footer {
+    background-color: var(--dark-surface);
+}
+
+.alert-timestamp {
+    color: var(--dark-text-muted);
+}
+
+.progress-bar {
+    background-color: #333;
+}
+
+.alert-filter {
+    background: none;
+    border: 1px solid var(--dark-border);
+    color: var(--dark-text-secondary);
+}
+
+.alert-filter.active {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: #000;
+}
+
+.alert-filter:hover:not(.active) {
+    background-color: var(--dark-surface);
+}
+
+.alert-empty {
+    background-color: var(--dark-card);
+}
+
+/* Modal styles */
+.modal-overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-container {
+    background-color: var(--dark-card);
+}
+
+.modal-header {
+    border-bottom: 1px solid var(--dark-border);
+}
+
+.modal-close {
+    color: var(--dark-text-muted);
+}
+
+.modal-close:hover {
+    color: var(--dark-text-primary);
+}
+
+/* Tweet specific styles */
+.tweet-card {
+    background-color: var(--dark-card);
+    border-top: 4px solid #1da1f2;
+}
+
+.tweet-header {
+    border-bottom: 1px solid var(--dark-border);
+}
+
+.tweet-actions {
+    background-color: var(--dark-surface);
+}
+
+.keyword-tag {
+    background-color: rgba(29, 161, 242, 0.2);
+    color: #1da1f2;
+}
+
+/* Token card styles */
+.token-card {
+    background-color: var(--dark-card);
+    border-top: 4px solid var(--primary-color);
+}
+
+.token-header {
+    border-bottom: 1px solid var(--dark-border);
+}
+
+.token-blockchain {
+    background-color: rgba(63, 81, 181, 0.2);
+}
+
+.token-address {
+    background-color: var(--dark-surface);
+}
+
+.token-actions {
+    background-color: var(--dark-surface);
+}
+
+/* Empty states */
+.empty-state {
+    color: var(--dark-text-secondary);
+}
+
+.empty-state i {
+    color: var(--dark-border);
+}
+
+/* Analysis specific styles */
+.score-item.positive, .score-item.high {
+    background-color: rgba(76, 175, 80, 0.2);
+}
+
+.score-item.neutral, .score-item.medium {
+    background-color: rgba(255, 152, 0, 0.2);
+}
+
+.score-item.negative, .score-item.low {
+    background-color: rgba(244, 67, 54, 0.2);
+}
+
+.match-item {
+    background-color: var(--dark-surface);
+}

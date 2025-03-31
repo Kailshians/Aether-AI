@@ -1,0 +1,71 @@
+/aether-ai/
+│
+├── /ballistic_service/               # Meme-to-coin detection
+│   ├── /data/
+│   │   ├── raw_memes.json            # Raw meme data (Twitter/Reddit)
+│   │   ├── eth_contracts.json        # Ethereum contract ABIs
+│   │   └── alerts/                   # Notification history
+│   │       ├── triggered/
+│   │       └── pending/
+│   │
+│   ├── /scripts/
+│   │   ├── meme_scanner.py           # NER/keyword extraction
+│   │   ├── contract_monitor.py       # Etherscan API handler
+│   │   ├── alert_engine.py           # Notification generator
+│   │   └── anti_scam.py              # Liquidity/safety checks
+│   │
+│   ├── /models/
+│   │   ├── ner_model.pkl             # Trained NER model
+│   │   └── keyword_db.sqlite         # Crypto slang database
+│   │
+│   └── app.py                        # Service orchestrator
+│
+├── /trendforger/                     # Creator tokenization
+│   ├── /data/
+│   │   ├── creator_tokens.json       # Deployed token registry
+│   │   ├── royalty_templates/        # Solidity contract templates
+│   │   └── revenue_logs/             # Royalty payment history
+│   │
+│   ├── /scripts/
+│   │   ├── tokenizer.py              # 1-click token deployer
+│   │   ├── royalty_tracker.py        # Revenue distributor
+│   │   └── meme_analytics.py         # Virality predictor
+│   │
+│   ├── /assets/
+│   │   ├── ui_templates/             # HTML/CSS for creator dash
+│   │   └── contract_audits/          # Security reports
+│   │
+│   └── app.py                        # FastAPI server
+│
+├── /analysis/                        # Shared analytics
+│   ├── /sentiment/
+│   │   ├── crypto_lexicon.txt        # Custom slang weights
+│   │   └── vader_custom.py           # Modified sentiment analyzer
+│   │
+│   ├── /onchain/
+│   │   ├── dex_metrics.py            # Volume/MCAP analysis
+│   │   └── whale_tracker.py          # Large holder monitoring
+│   │
+│   └── /cross_service/
+│       ├── meme_coin_correlator.py   # Links Ballistic+TrendForger data
+│       └── alert_optimizer.py        # Reduces false positives
+│
+├── /web/
+│   ├── /static/
+│   │   ├── js/
+│   │   │   ├── ballistic_alerts.js   # Real-time notification handler
+│   │   │   └── trendforger_ui.js     # Creator dashboard
+│   │   │
+│   │   └── css/
+│   │       ├── alerts.css            # Notification styles
+│   │       └── creator.css          # Dashboard styles
+│   │
+│   ├── /templates/
+│   │   ├── ballistic.html            # Alert center UI
+│   │   └── trendforger.html          # Tokenization portal
+│   │
+│   └── app.py                        # Flask/Django server
+│
+├── config.py                         # API keys/settings
+├── requirements.txt                  # Python dependencies
+└── README.md                         # Setup/usage guide

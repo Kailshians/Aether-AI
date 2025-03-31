@@ -1,0 +1,64 @@
+# Crypto Lexicon for Sentiment Analysis
+# Format: term[tab]sentiment_value
+# Sentiment values range from -4 (very negative) to +4 (very positive)
+
+# Positive terms
+moon	3.9
+hodl	2.5
+bullish	3.0
+lambo	2.8
+diamond hands	3.2
+to the moon	3.9
+rocket	3.0
+🚀	3.5
+pump	2.0
+gainz	3.0
+rekt	-3.0
+fud	-2.5
+based	2.0
+btfd	2.5
+diamond	2.8
+hands	1.5
+diamond hands	3.4
+gm	1.5
+wagmi	3.0
+bullrun	3.5
+altseason	2.5
+ape	1.5
+ape in	2.0
+hold	1.8
+holding	1.8
+#HODL	3.0
+
+# Negative terms
+rugpull	-3.8
+rug pull	-3.8
+rug	-3.0
+dump	-2.5
+ponzi	-3.5
+scam	-3.5
+bearish	-2.5
+shitcoin	-2.5
+shilling	-1.5
+fomo	-1.0
+ngmi	-2.0
+bear market	-2.5
+crash	-3.0
+dumping	-2.8
+dumped	-2.8
+exit scam	-3.8
+honeypot	-3.5
+scamcoin	-3.5
+
+# Neutral/context-dependent
+degen	0.0
+airdrop	1.5
+staking	1.0
+yield	1.0
+mining	0.5
+nft	0.5
+ico	0.0
+token	0.0
+whale	0.0
+gas	-0.5
+fees	-1.0

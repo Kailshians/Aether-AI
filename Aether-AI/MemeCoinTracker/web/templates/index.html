@@ -1,0 +1,184 @@
+{% extends 'layout.html' %}
+
+{% block title %}Aether AI - Meme Coin Prediction Platform{% endblock %}
+
+{% block content %}
+<div class="row align-items-center mb-5">
+    <div class="col-lg-6">
+        <h1 class="display-4 mb-3">Predict the Next <span class="text-primary">Meme Coin</span> Phenomenon</h1>
+        <p class="lead mb-4">AetherAI uses advanced artificial intelligence to monitor trending memes and influential tweets, identifying potential meme coins before they explode in value.</p>
+        <div class="d-flex gap-3">
+            <a href="/ballistic" class="btn btn-primary">
+                <i data-feather="trending-up"></i> Meme Detector
+            </a>
+            <a href="/trendforger" class="btn btn-secondary">
+                <i data-feather="users"></i> Influencer Tracker
+            </a>
+        </div>
+    </div>
+    <div class="col-lg-6 mt-4 mt-lg-0 text-center">
+        <svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+            <!-- Stylized rocket/chart combination -->
+            <defs>
+                <linearGradient id="rocketGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#3f51b5" />
+                    <stop offset="100%" stop-color="#673ab7" />
+                </linearGradient>
+                <linearGradient id="chartGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+                    <stop offset="0%" stop-color="#4caf50" />
+                    <stop offset="100%" stop-color="#8bc34a" />
+                </linearGradient>
+                <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#f5f5f5" />
+                    <stop offset="100%" stop-color="#e0e0e0" />
+                </linearGradient>
+            </defs>
+            
+            <!-- Background -->
+            <rect x="10" y="10" width="380" height="280" rx="20" fill="url(#bgGrad)" />
+            
+            <!-- Chart lines -->
+            <polyline points="50,250 100,200 150,220 200,150 250,100 300,50" 
+                  stroke="url(#chartGrad)" stroke-width="4" fill="none" />
+                  
+            <!-- Rocket -->
+            <g transform="translate(300, 50) rotate(45)">
+                <path d="M0,0 L-15,30 L0,25 L15,30 Z" fill="url(#rocketGrad)" />
+                <circle cx="0" cy="10" r="10" fill="#fff" />
+                <path d="M-15,30 L-10,40 L0,35 L10,40 L15,30" fill="#ff4081" />
+                <path d="M-8,40 L-5,50 L-2,40" fill="#ff4081" />
+                <path d="M2,40 L5,50 L8,40" fill="#ff4081" />
+            </g>
+            
+            <!-- Coins -->
+            <circle cx="100" cy="200" r="10" fill="#ffc107" stroke="#fff" stroke-width="2" />
+            <circle cx="150" cy="220" r="10" fill="#ffc107" stroke="#fff" stroke-width="2" />
+            <circle cx="200" cy="150" r="10" fill="#ffc107" stroke="#fff" stroke-width="2" />
+            <circle cx="250" cy="100" r="10" fill="#ffc107" stroke="#fff" stroke-width="2" />
+            
+            <!-- Meme symbols -->
+            <text x="100" cy="200" font-family="sans-serif" font-size="10" fill="#fff" text-anchor="middle" dominant-baseline="middle">DOGE</text>
+            <text x="150" cy="220" font-family="sans-serif" font-size="10" fill="#fff" text-anchor="middle" dominant-baseline="middle">PEPE</text>
+            <text x="200" cy="150" font-family="sans-serif" font-size="10" fill="#fff" text-anchor="middle" dominant-baseline="middle">SHIB</text>
+            <text x="250" cy="100" font-family="sans-serif" font-size="10" fill="#fff" text-anchor="middle" dominant-baseline="middle">MOON</text>
+        </svg>
+    </div>
+</div>
+
+<div class="row mb-5">
+    <div class="col-12">
+        <h2 class="section-title">
+            <i data-feather="zap"></i> How It Works
+        </h2>
+    </div>
+</div>
+
+<div class="row mb-5">
+    <div class="col-md-4 mb-4">
+        <div class="card h-100">
+            <div class="card-body text-center">
+                <div class="mb-3">
+                    <i data-feather="trending-up" style="width: 48px; height: 48px; color: #3f51b5;"></i>
+                </div>
+                <h3 class="h5 mb-3">Ballistic Service</h3>
+                <p class="text-muted">Identifies trending memes on social platforms and matches them to emerging blockchain tokens before they go viral.</p>
+                <a href="/ballistic" class="btn btn-outline-primary btn-sm mt-3">Explore Ballistic</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4 mb-4">
+        <div class="card h-100">
+            <div class="card-body text-center">
+                <div class="mb-3">
+                    <i data-feather="users" style="width: 48px; height: 48px; color: #673ab7;"></i>
+                </div>
+                <h3 class="h5 mb-3">TrendForger</h3>
+                <p class="text-muted">Monitors influential figures like Elon Musk and analyzes their tweets for potential meme coin opportunities.</p>
+                <a href="/trendforger" class="btn btn-outline-primary btn-sm mt-3">Explore TrendForger</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4 mb-4">
+        <div class="card h-100">
+            <div class="card-body text-center">
+                <div class="mb-3">
+                    <i data-feather="shield" style="width: 48px; height: 48px; color: #4caf50;"></i>
+                </div>
+                <h3 class="h5 mb-3">Safety Analysis</h3>
+                <p class="text-muted">Validates potential meme coins through safety checks to identify and filter out potential scams.</p>
+                <a href="/ballistic" class="btn btn-outline-primary btn-sm mt-3">Analyze Coins</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mb-5">
+    <div class="col-12">
+        <h2 class="section-title">
+            <i data-feather="bar-chart-2"></i> Key Features
+        </h2>
+    </div>
+    
+    <div class="col-md-6">
+        <ul class="list-group mb-4">
+            <li class="list-group-item d-flex align-items-center">
+                <i data-feather="check" class="text-success me-2"></i>
+                Real-time monitoring of trending memes across platforms
+            </li>
+            <li class="list-group-item d-flex align-items-center">
+                <i data-feather="check" class="text-success me-2"></i>
+                Influencer tweet tracking with sentiment analysis
+            </li>
+            <li class="list-group-item d-flex align-items-center">
+                <i data-feather="check" class="text-success me-2"></i>
+                Advanced NLP for keyword extraction and matching
+            </li>
+            <li class="list-group-item d-flex align-items-center">
+                <i data-feather="check" class="text-success me-2"></i>
+                Blockchain integration for token verification
+            </li>
+        </ul>
+    </div>
+    
+    <div class="col-md-6">
+        <ul class="list-group mb-4">
+            <li class="list-group-item d-flex align-items-center">
+                <i data-feather="check" class="text-success me-2"></i>
+                Anti-scam analysis with safety scoring
+            </li>
+            <li class="list-group-item d-flex align-items-center">
+                <i data-feather="check" class="text-success me-2"></i>
+                Real-time alerts for potential meme coin opportunities
+            </li>
+            <li class="list-group-item d-flex align-items-center">
+                <i data-feather="check" class="text-success me-2"></i>
+                Viral prediction algorithms to assess potential
+            </li>
+            <li class="list-group-item d-flex align-items-center">
+                <i data-feather="check" class="text-success me-2"></i>
+                Creator tools for meme coin tokenization
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12 text-center">
+        <div class="card mb-4">
+            <div class="card-body py-5">
+                <h2 class="h4 mb-4">Ready to discover the next big meme coin?</h2>
+                <div class="d-flex gap-3 justify-content-center">
+                    <a href="/ballistic" class="btn btn-primary">
+                        <i data-feather="trending-up"></i> Start with Ballistic
+                    </a>
+                    <a href="/trendforger" class="btn btn-secondary">
+                        <i data-feather="users"></i> Try TrendForger
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

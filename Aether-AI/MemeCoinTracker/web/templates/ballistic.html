@@ -1,0 +1,150 @@
+{% extends 'layout.html' %}
+
+{% block title %}Ballistic - Meme-to-Coin Detection | Aether AI{% endblock %}
+
+{% block styles %}
+<link href="{{ url_for('static', filename='css/alerts.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<div class="row mb-4">
+    <div class="col-12">
+        <h1 class="section-title">
+            <i data-feather="trending-up"></i> Ballistic
+            <small class="text-muted ms-2 fs-6">Meme-to-Coin Detection</small>
+        </h1>
+        <p class="lead">Scan viral memes across social media platforms and detect early meme coin opportunities.</p>
+    </div>
+</div>
+
+<div class="row">
+    <!-- Main Alert Panel -->
+    <div class="col-lg-8 mb-4">
+        <div class="card">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <div>
+                    <h5 class="mb-0">Meme Coin Alerts</h5>
+                    <small class="text-muted">
+                        <span id="alert-counter" class="badge bg-primary">0</span> active alerts
+                    </small>
+                </div>
+                <div class="d-flex align-items-center">
+                    <span id="alert-status" class="status-indicator me-3">Connecting...</span>
+                    <button id="refresh-alerts" class="btn btn-sm btn-outline-primary">
+                        <i data-feather="refresh-cw"></i> Refresh
+                    </button>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="alert-filters mb-3">
+                    <button class="alert-filter active" data-filter="all">All Alerts</button>
+                    <button class="alert-filter" data-filter="high">High Confidence</button>
+                    <button class="alert-filter" data-filter="medium">Medium Confidence</button>
+                    <button class="alert-filter" data-filter="low">Low Confidence</button>
+                </div>
+                
+                <div id="alert-container" class="alert-list">
+                    <!-- Alert cards will be dynamically populated here -->
+                    <div class="loading-indicator">
+                        <div class="spinner"></div>
+                        <p>Loading alerts...</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer d-flex justify-content-between align-items-center">
+                <span class="text-muted">Last updated: <span id="last-update-time">Just now</span></span>
+                <button id="scan-trending" class="btn btn-primary">
+                    <i data-feather="search"></i> Scan Trending Memes
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Content Analysis Panel -->
+    <div class="col-lg-4 mb-4">
+        <div class="card mb-4">
+            <div class="card-header">
+                <h5 class="mb-0">Content Analysis</h5>
+                <small class="text-muted">Analyze meme text for coin potential</small>
+            </div>
+            <div class="card-body">
+                <form id="analysis-form">
+                    <div class="mb-3">
+                        <label for="analysis-input" class="form-label">Enter meme content or description</label>
+                        <textarea id="analysis-input" class="form-control" rows="4" placeholder="e.g., 'Just bought some Dogecoin! To the moon! 🚀'"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">
+                        <i data-feather="search"></i> Analyze Content
+                    </button>
+                </form>
+                
+                <div id="analysis-results" class="mt-4">
+                    <!-- Analysis results will be dynamically populated here -->
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0">How It Works</h5>
+            </div>
+            <div class="card-body">
+                <ol class="mb-0">
+                    <li class="mb-2">
+                        <strong>Meme Scanning</strong>
+                        <p class="small text-muted">We monitor trending memes across Twitter and Reddit</p>
+                    </li>
+                    <li class="mb-2">
+                        <strong>Keyword Extraction</strong>
+                        <p class="small text-muted">Our AI extracts key concepts and themes</p>
+                    </li>
+                    <li class="mb-2">
+                        <strong>Blockchain Monitoring</strong>
+                        <p class="small text-muted">We search for new tokens matching these keywords</p>
+                    </li>
+                    <li class="mb-2">
+                        <strong>Safety Analysis</strong>
+                        <p class="small text-muted">Each potential match is analyzed for scam indicators</p>
+                    </li>
+                    <li>
+                        <strong>Real-time Alerts</strong>
+                        <p class="small text-muted">You receive alerts when matches are found</p>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Alert Detail Modal -->
+<div id="alert-modal" class="modal">
+    <div class="modal-overlay"></div>
+    <div class="modal-container">
+        <div class="modal-header">
+            <h2>Alert Details</h2>
+            <button class="modal-close">&times;</button>
+        </div>
+        <div class="modal-content">
+            <!-- Modal content will be dynamically populated -->
+        </div>
+    </div>
+</div>
+
+<!-- Analysis Modal -->
+<div id="analysis-modal" class="modal">
+    <div class="modal-overlay"></div>
+    <div class="modal-container">
+        <div class="modal-header">
+            <h2>Coin Analysis</h2>
+            <button class="modal-close">&times;</button>
+        </div>
+        <div class="modal-content">
+            <!-- Modal content will be dynamically populated -->
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/ballistic_alerts.js') }}"></script>
+{% endblock %}
